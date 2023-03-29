@@ -1,0 +1,118 @@
+/* Teams Clone CSS Demo Styles */
+
+:root{
+    /* colours */
+    --backgroundColor: #222222;
+    --altBackgroundColor: #373737;
+    --textColor: #FFFFFF;
+    
+    /* measuements */
+    --sizeXs: 0.5em;
+    --sizeSm: calc(var(--sizeXs) * 1.25);
+    --sizeMd: calc(var(--sizeSm) * 1.25);
+    --sizeLg: calc(var(--sizeMd) * 1.25);
+    --sizeXl: calc(var(--sizeLg) * 1.25);
+    
+    /* styles */
+    --boxShadow: none;
+    --border: solid 1px black;
+    --borderRadius: none;
+}
+
+.lightMode{  
+    /* colours */
+    --backgroundColor: #FFFFFF;
+    --altBackgroundColor: #d6d6d6;
+    --textColor: #222222;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: none;
+}
+
+body{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    max-width: 100svw;
+    position: relative;
+}
+
+a, a:hover, a:visited, a:active{
+    color: var(--textColor);
+}
+
+header{
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--backgroundColor);
+}
+
+header nav, header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+header nav{
+    display: flex;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+
+
+header nav li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--sizeSm);
+    border: var(--border);
+}
+
+header nav li:hover{
+    background-color: var(--altBackgroundColor);
+}
+
+header nav a img{
+    display: block;
+    min-height: var(--sizeXs);
+    min-width: var(--sizeXs);
+}
+
+.chatLink{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--sizeXs);
+}
+
+.chatLink:hover{
+    background-color: var(--altBackgroundColor);
+}
+
+.chatListDisplayPictureWrapper{
+    padding: var(--sizeXs);
+}
+
+.chatListDisplayPicture{
+    border-radius: 50%;
+}
+
+.chatLinkUserNameWrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
